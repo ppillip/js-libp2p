@@ -77,6 +77,9 @@
     "webrtcsupport": "^2.2.0",
     "wrtc": "~0.1.6"
   },
+  "resolutions": {
+    "libp2p-crypto": "github:libp2p/js-libp2p-crypto#feat/ursa"
+  },
   "contributors": [
     "Alan Shaw <alan@tableflip.io>",
     "Chris Bratlien <chrisbratlien@gmail.com>",
