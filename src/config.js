@@ -22,7 +22,7 @@ const OptionsSchema = Joi.object({
   config: Joi.object().keys({
     peerDiscovery: Joi.object().allow(null),
     relay: Joi.object().keys({
-      enabled: Joi.boolean().default(false),
+      enabled: Joi.boolean().default(true),
       hop: Joi.object().keys({
         enabled: Joi.boolean().default(false),
         active: Joi.boolean().default(false)

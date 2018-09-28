@@ -90,7 +90,7 @@ describe('configuration', () => {
           dht: false
         },
         relay: {
-          enabled: false
+          enabled: true
         }
       }
     }
