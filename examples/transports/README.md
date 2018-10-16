@@ -10,13 +10,16 @@ A libp2p node can use one or more Transports to dial and listen for Connections.
 
 These transports are modules that offer a clean interface for dialing and listening, defined by the [interface-transport](https://github.com/libp2p/interface-transport) specification. 
 
-`이러한 전송은` [interface-transport](https://github.com/libp2p/interface-transport) `사양에 정의 된 전화 걸기 및 청취를위한 깨끗한 인터페이스를 제공하는 모듈입니다.` 
+[interface-transport](https://github.com/libp2p/interface-transport) `에 정의된, 전송 모듈은 dialing 및 listening을 위한 깔끔한 인터페이스를 제공합니다.` 
 
 Some examples of possible transports are: TCP, UTP, WebRTC, QUIC, HTTP, Pigeon and so on. 
 
 `가능한 전송의 예로는 TCP, UTP, WebRTC, QUIC, HTTP, Pigeon 등이 있습니다.`
 
-A more complete definition of what is a transport can be found on the [interface-transport](https://github.com/libp2p/interface-transport) specification. `전송 장치에 대한보다 확실한 정의는` [interface-transport] (https://github.com/libp2p/interface-transport) `상세에서 찾을 수 있습니다.` A way to recognize a candidate transport is through the badge `후보 운송 수단을 인식하는 방법은 배지를 통한 것입니다.`:
+A more complete definition of what is a transport can be found on the [interface-transport](https://github.com/libp2p/interface-transport) specification. 
+`전송 장치에 대한보다 상세한 정의는` [interface-transport](https://github.com/libp2p/interface-transport) `스펙에서 찾을 수 있습니다.` 
+
+A way to recognize a candidate transport is through the badge `후보 운송 수단을 인식하는 방법은 배지를 통한 것입니다.`:
 
 [![](https://raw.githubusercontent.com/diasdavid/interface-transport/master/img/badge.png)](https://raw.githubusercontent.com/diasdavid/interface-transport/master/img/badge.png)
 
