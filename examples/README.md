@@ -1,11 +1,9 @@
 # `js-libp2p` Examples and Tutorials
 
-In this folder, you can find a variety of examples to help you get started in using js-libp2p, in Node.js and in the Browser.
-`이 폴더에서 , js-libp2p, Node.js 및 브라우저에서 시작하는 데 도움이되는 다양한 예제를 찾을 수 있습니다`
-Every example as a specific purpose and some of each incorporate a full tutorial that you can follow through, helping you expand your knowledge about libp2p and p2p networks in general.`특정 목적의 모든 예제와 각각의 예제는 완전한 튜토리얼을 포함하고 있으며 이를 통해 일반적으로 libp2p 및 p2p 네트워크에 대한 지식을 넓힐 수 있습니다.`
+이 폴더에서 , js-libp2p, Node.js 및 브라우저에서 시작하는 데 도움이되는 다양한 예제를 찾을 수 있습니다
+특정 목적의 모든 예제와 각각의 예제는 완전한 튜토리얼을 포함하고 있으며 이를 통해 일반적으로 libp2p 및 p2p 네트워크에 대한 지식을 넓힐 수 있습니다.
 
-Let us know if you find any issue or if you want to contribute and add a new tutorial, feel welcome to submit a PR, thank you!
-`어떤 문제가 있거나 새로운 튜토리얼을 추가하고 기고하고 싶다면 PR에 오신 것을 환영합니다. 고맙습니다.`
+어떤 문제가 있거나 새로운 튜토리얼을 추가하고 기고하고 싶다면 언제나 환영합니다. 고맙습니다.
 
 ## libp2p 동작 이해하기
 
