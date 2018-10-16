@@ -28,25 +28,19 @@ A way to recognize a candidate transport is through the badge
 
 ## 1. TCP로 libp2p 번들 생성하기
 
-When using libp2p , you always want to create your own libp2p Bundle, that is, pick your set of modules and create your network stack with the properties you need. 
-
 `libp2p를 사용하여, 자신만의 libp2p 번들을 만들고 싶을때, 모듈 집합을 선택하고 원하는 네트워크 속성으로 필요한 스텍을 만듭니다.`
- 
-In this example, we will create a bundle with TCP. You can find the complete solution on the file [1.js](./1.js).
 
-`이 예제에서는 TCP를 사용하여 번들을 생성합니다. 완전한 솔루션은 [1.js] 파일 (./ 1js)에서 찾을 수 있습니다.`
+`이 예제에서는 TCP를 사용하여 번들을 생성합니다. 전체 소스는` [1.js](./ 1js) `파일 에서 찾을 수 있습니다.`
 
-You will need 5 deps total, so go ahead and install all of them with:
-
-`총 5 deps가 필요합니다. 다음과 같이 설치 하세요`
+`총 5개의 deps가 필요합니다. 다음과 같이 설치 하세요 : `
 
 ```bash
 > npm install libp2p libp2p-tcp peer-info async @nodeutils/defaults-deep
 ```
 
-Then, on your favorite text editor create a file with the `.js` extension. I've called mine `1.js`.
+`그런 다음, 좋아하는 텍스트 편집기에서` `.js` `확장자로 파일을 생성하십시오. 나는 ` `1.js` `라고 붙였습니다`
 
-First thing is to create our own bundle! Insert:
+`우선 우리 자신의 번들을 만드는 것입니다!` 삽입 :
 
 ```JavaScript
 'use strict'
@@ -75,7 +69,9 @@ class MyBundle extends libp2p {
 }
 ```
 
-Now that we have our own MyBundle class that extends libp2p, let's create a node with it. We will use `async/waterfall` just for code structure, but you don't need to. Append to the same file:
+`이제 libp2p를 확장하여 MyBundle 클래스를 만들었습니다. 클래스를 사용하여 노드를 만들어 봅시다.`
+
+`앞으로 async / waterfall 을 코드 구조로 사용 하겠지만, 꼭 그럴필요는 없습니다. 동일한 파일에 추가하세요 :`
 
 ```JavaScript
 let node
@@ -110,7 +106,7 @@ waterfall([
 })
 ```
 
-Running this should result in something like:
+이 작업을 실행하면 다음과 같은 결과가 발생합니다 : 
 
 ```bash
 > node 1.js
