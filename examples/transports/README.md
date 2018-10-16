@@ -1,28 +1,13 @@
 # [Transports](http://libp2p.io/implementations/#transports)
 
-libp2p doesn't make assumptions for you, instead, it enables you as the developer of the application to pick the modules you need to run your application, which can vary depending on the runtime you are executing.
+libp2p 는 가정을하지 않으며, 대신 응용 프로그램 개발자가 응용 프로그램을 실행하는 데 필요한 모듈을 선택하게합니다. 응용 프로그램은 실행중인 런타임에 따라 달라질 수 있습니다. libp2p 노드는 하나 이상의 전송을 사용하여 전화 접속 연결을 수신 대기 할 수 있습니다.
 
-`libp2p는 가정을하지 않으며 대신 응용 프로그램 개발자가 응용 프로그램을 실행하는 데 필요한 모듈을 선택하게합니다. 응용 프로그램은 실행중인 런타임에 따라 달라질 수 있습니다` 
+[interface-transport](https://github.com/libp2p/interface-transport) 에 정의된, transport 모듈은 dialing 및 listening을 위한 깔끔한 인터페이스를 제공합니다.
 
-A libp2p node can use one or more Transports to dial and listen for Connections. 
+가능한 transport의 예로는 TCP, UTP, WebRTC, QUIC, HTTP, Pigeon 등이 있습니다.
+transport에 대한 보다 상세한 정의는 [interface-transport](https://github.com/libp2p/interface-transport) 스펙에서 찾을 수 있습니다.
 
-`libp2p 노드는 하나 이상의 전송을 사용하여 전화 접속 연결을 수신 대기 할 수 있습니다.` 
-
-These transports are modules that offer a clean interface for dialing and listening, defined by the [interface-transport](https://github.com/libp2p/interface-transport) specification. 
-
-[interface-transport](https://github.com/libp2p/interface-transport) `에 정의된, 전송 모듈은 dialing 및 listening을 위한 깔끔한 인터페이스를 제공합니다.` 
-
-Some examples of possible transports are: TCP, UTP, WebRTC, QUIC, HTTP, Pigeon and so on. 
-
-`가능한 전송의 예로는 TCP, UTP, WebRTC, QUIC, HTTP, Pigeon 등이 있습니다.`
-
-A more complete definition of what is a transport can be found on the [interface-transport](https://github.com/libp2p/interface-transport) specification. 
-
-`전송 장치에 대한보다 상세한 정의는` [interface-transport](https://github.com/libp2p/interface-transport) `스펙에서 찾을 수 있습니다.` 
-
-A way to recognize a candidate transport is through the badge 
-
-`후보 운송 수단을 인식하는 방법은 배지를 통한 것입니다.`:
+transport 가능한지 여부는 배지를 확인 하는 것입니다.:
 
 [![](https://raw.githubusercontent.com/diasdavid/interface-transport/master/img/badge.png)](https://raw.githubusercontent.com/diasdavid/interface-transport/master/img/badge.png)
 
@@ -40,7 +25,7 @@ libp2p를 사용하여, 자신만의 libp2p 번들을 만들고 싶을때, 모�
 
 그런 다음, 좋아하는 텍스트 편집기에서 `.js` 확장자로 파일을 생성하십시오. 나는 `1.js` 라고 붙였습니다
 
-우선 우리 자신의 번들을 만드는 것입니다! 삽입 :
+우선 우리 자신의 번들을 만드는 것입니다! insert :
 
 ```JavaScript
 'use strict'
@@ -134,7 +119,7 @@ listening on:
 const pull = require('pull-stream')
 ```
 
-우리는 1 단계의 MyBundle 클래스를 재사용 할 것입니다, 이번에는 좀더 간단하게 하기 위해, 2개의 함수를 생성합니다. one to create nodes and another to print the addrs to avoid duplicating code.
+우리는 1 단계의 MyBundle 클래스를 재사용 할 것입니다, 이번에는 좀더 간단하게 하기 위해, 2개의 함수를 생성합니다. 노드를 위해서 한개를 생성하고 코드중복 방지를 위하여 또하나는 addrs를 출력합니다. 
 
 ```JavaScript
 function createNode (callback) {
@@ -156,8 +141,7 @@ function printAddrs (node, number) {
 }
 
 ```
-
-Now we are going to use `async/parallel` to create two nodes, print their addresses and dial from one node to the other. We already added `async` as a dependency, but still need to import `async/parallel`:
+2개의 노드를 생성하기 위하여 `async/parallel`를 사용할 예정입니다. 그들의 주소를 출력하고 다른 하나로 다이얼을 합니다. 이미 `async` 를 추가 했습니다. `async/parallel`를 하나더 추가합니다. 
 
 ```js
 const parallel = require('async/parallel')
