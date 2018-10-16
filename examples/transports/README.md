@@ -10,7 +10,7 @@ A libp2p node can use one or more Transports to dial and listen for Connections.
 
 These transports are modules that offer a clean interface for dialing and listening, defined by the [interface-transport](https://github.com/libp2p/interface-transport) specification. 
 
-`이러한 전송은` [인터페이스 전송] (https://github.com/libp2p/interface-transport) `사양에 정의 된 전화 걸기 및 청취를위한 깨끗한 인터페이스를 제공하는 모듈입니다.` 
+`이러한 전송은` [interface-transport](https://github.com/libp2p/interface-transport) `사양에 정의 된 전화 걸기 및 청취를위한 깨끗한 인터페이스를 제공하는 모듈입니다.` 
 
 Some examples of possible transports are: TCP, UTP, WebRTC, QUIC, HTTP, Pigeon and so on. 
 
