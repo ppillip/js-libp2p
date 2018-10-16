@@ -17,17 +17,28 @@ Some examples of possible transports are: TCP, UTP, WebRTC, QUIC, HTTP, Pigeon a
 `가능한 전송의 예로는 TCP, UTP, WebRTC, QUIC, HTTP, Pigeon 등이 있습니다.`
 
 A more complete definition of what is a transport can be found on the [interface-transport](https://github.com/libp2p/interface-transport) specification. 
+
 `전송 장치에 대한보다 상세한 정의는` [interface-transport](https://github.com/libp2p/interface-transport) `스펙에서 찾을 수 있습니다.` 
 
-A way to recognize a candidate transport is through the badge `후보 운송 수단을 인식하는 방법은 배지를 통한 것입니다.`:
+A way to recognize a candidate transport is through the badge 
+
+`후보 운송 수단을 인식하는 방법은 배지를 통한 것입니다.`:
 
 [![](https://raw.githubusercontent.com/diasdavid/interface-transport/master/img/badge.png)](https://raw.githubusercontent.com/diasdavid/interface-transport/master/img/badge.png)
 
 ## 1. TCP로 libp2p 번들 생성하기
 
-When using libp2p, you always want to create your own libp2p Bundle, that is, pick your set of modules and create your network stack with the properties you need. In this example, we will create a bundle with TCP. You can find the complete solution on the file [1.js](./1.js).
+When using libp2p , you always want to create your own libp2p Bundle, that is, pick your set of modules and create your network stack with the properties you need. 
+
+`libp2p를 사용하여, 자신만의 libp2p 번들을 만들고 싶을때, 모듈 집합을 선택하고 원하는 네트워크 속성으로 필요한 스텍을 만듭니다.`
+ 
+In this example, we will create a bundle with TCP. You can find the complete solution on the file [1.js](./1.js).
+
+`이 예제에서는 TCP를 사용하여 번들을 생성합니다. 완전한 솔루션은 [1.js] 파일 (./ 1js)에서 찾을 수 있습니다.`
 
 You will need 5 deps total, so go ahead and install all of them with:
+
+`총 5 deps가 필요합니다. 다음과 같이 설치 하세요`
 
 ```bash
 > npm install libp2p libp2p-tcp peer-info async @nodeutils/defaults-deep
