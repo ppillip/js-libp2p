@@ -28,19 +28,19 @@ A way to recognize a candidate transport is through the badge
 
 ## 1. TCP로 libp2p 번들 생성하기
 
-`libp2p를 사용하여, 자신만의 libp2p 번들을 만들고 싶을때, 모듈 집합을 선택하고 원하는 네트워크 속성으로 필요한 스텍을 만듭니다.`
+libp2p를 사용하여, 자신만의 libp2p 번들을 만들고 싶을때, 모듈 집합을 선택하고 원하는 네트워크 속성으로 필요한 스텍을 만듭니다.
 
-`이 예제에서는 TCP를 사용하여 번들을 생성합니다. 전체 소스는` [1.js](./ 1js) `파일 에서 찾을 수 있습니다.`
+이 예제에서는 TCP를 사용하여 번들을 생성합니다. 전체 소스는 [1.js](./ 1js) 파일 에서 찾을 수 있습니다.
 
-`총 5개의 deps가 필요합니다. 다음과 같이 설치 하세요 : `
+총 5개의 deps가 필요합니다. 다음과 같이 설치 하세요 :
 
 ```bash
 > npm install libp2p libp2p-tcp peer-info async @nodeutils/defaults-deep
 ```
 
-`그런 다음, 좋아하는 텍스트 편집기에서` `.js` `확장자로 파일을 생성하십시오. 나는 ` `1.js` `라고 붙였습니다`
+그런 다음, 좋아하는 텍스트 편집기에서 `.js` 확장자로 파일을 생성하십시오. 나는 `1.js` 라고 붙였습니다
 
-`우선 우리 자신의 번들을 만드는 것입니다!` 삽입 :
+우선 우리 자신의 번들을 만드는 것입니다! 삽입 :
 
 ```JavaScript
 'use strict'
@@ -69,9 +69,9 @@ class MyBundle extends libp2p {
 }
 ```
 
-`이제 libp2p를 확장하여 MyBundle 클래스를 만들었습니다. 클래스를 사용하여 노드를 만들어 봅시다.`
+이제 libp2p를 확장하여 MyBundle 클래스를 만들었습니다. 클래스를 사용하여 노드를 만들어 봅시다.
 
-`앞으로 async / waterfall 을 코드 구조로 사용 하겠지만, 꼭 그럴필요는 없습니다. 동일한 파일에 추가하세요 :`
+앞으로 async / waterfall 을 코드 구조로 사용 하겠지만, 꼭 그럴필요는 없습니다. 동일한 파일에 추가하세요 :
 
 ```JavaScript
 let node
@@ -116,25 +116,25 @@ listening on:
 /ip4/192.168.2.156/tcp/61329/ipfs/QmW2cKTakTYqbQkUzBTEGXgWYFj1YEPeUndE1YWs6CBzDQ
 ```
 
-That `QmW2cKTakTYqbQkUzBTEGXgWYFj1YEPeUndE1YWs6CBzDQ` is the PeerId that was created during the PeerInfo generation.
+`QmW2cKTakTYqbQkUzBTEGXgWYFj1YEPeUndE1YWs6CBzDQ` 은 PeerInfo 생성중에 만들어진 PeerId 입니다.
 
-## 2. Dialing from one node to another node
+## 2. 한 노드에서 다른 노드로 Dialing 하기
 
-Now that we have our bundle, let's create two nodes and make them dial to each other! You can find the complete solution at [2.js](./2.js).
+이제 우리 번들이 생겼습니다, 두개의 노드를 만들고 서로 다이얼을 해봅시다. 완전한 코드는 [2.js](./2.js) 에 있습니다.
 
-For this step, we will need one more dependency.
+이 단계에서는, 종속 모듈 하나가 더 필요합니다.
 
 ```bash
 > npm install pull-stream
 ```
 
-And we also need to import the module on our .js file:
+그리고 모듈을 우리의 js 파일로 import 합니다. file:
 
 ```js
 const pull = require('pull-stream')
 ```
 
-We are going to reuse the MyBundle class from step 1, but this time to make things simpler, we will create two functions, one to create nodes and another to print the addrs to avoid duplicating code.
+우리는 1 단계의 MyBundle 클래스를 재사용 할 것입니다, 이번에는 좀더 간단하게 하기 위해, 2개의 함수를 생성합니다. one to create nodes and another to print the addrs to avoid duplicating code.
 
 ```JavaScript
 function createNode (callback) {
